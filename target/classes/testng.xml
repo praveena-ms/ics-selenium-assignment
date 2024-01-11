@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="All Test Suite" parallel="tests">
+    <listeners>
+        <listener class-name="com.ExtentReportListener.ExtentReportListenerNG"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="/Users/praveenamuvva/Java_Projects/GoogleSearch" parallel="methods" thread-count="5">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.mytests.GoogleSearchTest">
+                <methods>
+                    <include name="verifyGoogleSearchPage"/>
+                    <include name="verifyClickingSearchResults"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
